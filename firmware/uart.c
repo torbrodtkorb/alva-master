@@ -7,6 +7,7 @@
 
 volatile bool start_flag;
 volatile bool abort_flag;
+volatile bool single_sample;
 
 static volatile uint16_t crc;
 
@@ -60,16 +61,20 @@ void uart_send_crc () {
 }
 
 void uart_send_done () {
+  USART0.CTRLA &= ~USART_TXCIE_bm;
   while ((USART0.STATUS & USART_DREIF_bm) == 0);
   USART0.TXDATAL = 0;
   _delay_ms(500);
+  USART0.CTRLA |= USART_TXCIE_bm;
 }
 
 void uart_send_abort () {
+  USART0.CTRLA &= ~USART_TXCIE_bm;
   _delay_ms(1000);
   while ((USART0.STATUS & USART_DREIF_bm) == 0);
   USART0.TXDATAL = 1;
   _delay_ms(1000);
+  USART0.CTRLA |= USART_TXCIE_bm;
 }
 
 ISR (USART0_TXC_vect) {
@@ -84,4 +89,8 @@ ISR (USART0_RXC_vect) {
     start_flag = true;
   else if (data == 1)
     abort_flag = true;
+  else if (data == 2)
+    single_sample = true;
+  else if (data == 3)
+    single_sample = false;
 }

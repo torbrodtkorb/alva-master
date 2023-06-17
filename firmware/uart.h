@@ -7,6 +7,7 @@
 
 extern volatile bool start_flag;
 extern volatile bool abort_flag;
+extern volatile bool single_sample;
 
 void uart_init ();
 void uart_transmitted_callback ();

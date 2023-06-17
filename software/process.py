@@ -88,6 +88,8 @@ class Process:
         
         if not status:
             return False
+        
+        return True
 
         # Compute statistics per pole
         for index in range(len(self.file_degrees_relative[0])):

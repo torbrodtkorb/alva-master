@@ -40,8 +40,14 @@
 // time to send one byte (s) = 1 / (baudrate / 8)
 // time to send one sample (us) = 2 * 1.000.000 / (921600 / 8) = 17.36 ≈ 18 us ≈ 500 cycles
 
+// u-stepping 12800
 #define SAMPLE_COUNT 61311ul
-//#define SAMPLE_COUNT 6437ul
+
+// u-stepping 25600
+//#define SAMPLE_COUNT 122622ul
+
+// u-stepping 51200
+//#define SAMPLE_COUNT 245244ul
 
 static volatile int state;
 
@@ -153,9 +159,9 @@ int main () {
 
   // When starting, make sure the limit switch is not pressed
   if (limit_switch_pressed())
-    height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 2000);
+    height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 4000);
 
-  uint8_t measurement_count = 0;
+  uint16_t measurement_count = 0;
 
   while (1) {
     if (abort_flag)
@@ -176,7 +182,7 @@ int main () {
         break;
 
       case STATE_DOWN_FAST:
-        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 25000);
+        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, single_sample ? 22672 : 27000);
         state = STATE_DOWN_SLOW;
         break;
 
@@ -194,11 +200,13 @@ int main () {
       
       case STATE_RESET_STATOR:
         rotation_stepper_move_back(SAMPLE_COUNT);
-        state = (++measurement_count == 11) ? STATE_SEND_COMPLETE : STATE_UP_SLOW;
+        uint16_t tmp = single_sample ? 20 : 11; // 11 can not be changed without changed the number of steps in STATE_UP_SLOW
+        state = (++measurement_count == tmp) ? STATE_SEND_COMPLETE : STATE_UP_SLOW;
         break;
 
       case STATE_UP_SLOW:
-        height_stepper_move(DIRECTION_UP, SPEED_SLOW, 600);
+        if (!single_sample)
+          height_stepper_move(DIRECTION_UP, SPEED_SLOW, 866);
         state = STATE_MEASUREMENT;
         break;
 
@@ -208,7 +216,7 @@ int main () {
         break;
 
       case STATE_UP_FAST:
-        height_stepper_move(DIRECTION_UP, SPEED_FAST, 18000);
+        height_stepper_move(DIRECTION_UP, SPEED_FAST, single_sample ? 10672 : 15000);
         start_flag = false;
         state = STATE_IDLE;
         break;
@@ -217,11 +225,13 @@ int main () {
         state = STATE_IDLE;
         start_flag = false;
         abort_flag = false;
-  
-        uart_send_abort();
+
+        cli();
         while (limit_switch_not_pressed())
           height_stepper_move(DIRECTION_UP, SPEED_FAST, 1);
-        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 2000);
+        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 4000);
+        sei();
+        uart_send_abort();
         break;
     }
   }
