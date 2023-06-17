@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "stdint.h": "c",
+    "ioavr64db32.h": "c",
+    "io.h": "c",
+    "limit-switch.h": "c",
+    "interrupt.h": "c",
+    "rotation-stepper.h": "c",
+    "stdbool.h": "c"
+  }
+}

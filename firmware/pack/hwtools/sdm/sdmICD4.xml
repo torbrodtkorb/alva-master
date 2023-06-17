@@ -1,0 +1,40 @@
+<sdm:sdm xmlns:sdm="http://crownking/sdm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://crownking/sdm ../../schema/sdm/sdm.xsd">
+  <sdm:version sdm:filename="sdmICD4.xml" sdm:major="0" sdm:minor="0" sdm:rev="0"/>
+  <sdm:devicecapabilities>
+    <sdm:device sdm:devicename="AVR128DA28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DA32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DA48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DA64" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DB28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DB32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DB48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR128DB64" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR16DD14" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR16DD20" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR16DD28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR16DD32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DA28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DA32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DA48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DB28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DB32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DB48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DD14" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DD20" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DD28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR32DD32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DA28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DA32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DA48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DA64" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DB28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DB32" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DB48" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DB64" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DD14" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DD20" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DD28" sdm:profile="avrnativeavr8x"/>
+    <sdm:device sdm:devicename="AVR64DD32" sdm:profile="avrnativeavr8x"/>
+  </sdm:devicecapabilities>
+  <sdm:profiledef sdm:isstub="true" sdm:profilename="avrnativeavr8x" sdm:profilesupported="no"/>
+</sdm:sdm>

@@ -1,0 +1,1540 @@
+
+build/program.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000012  00806000  0000089e  00000932  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000089e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000015  00806012  00806012  00000944  2**0
+                  ALLOC
+  3 .stab         00003c00  00000000  00000000  00000944  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      0000e8f9  00000000  00000000  00004544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .comment      00000011  00000000  00000000  00012e3d  2**0
+                  CONTENTS, READONLY
+  6 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00012e50  2**2
+                  CONTENTS, READONLY
+  7 .debug_aranges 00000020  00000000  00000000  00012e90  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   000028f1  00000000  00000000  00012eb0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 0000263a  00000000  00000000  000157a1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   00000206  00000000  00000000  00017ddb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    00001189  00000000  00000000  00017fe1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 62 00 	jmp	0xc4	; 0xc4 <__ctors_end>
+   4:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+   8:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+   c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  10:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  14:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  18:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  1c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  20:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  24:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  28:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  2c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  30:	0c 94 36 03 	jmp	0x66c	; 0x66c <__vector_12>
+  34:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  38:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  3c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  40:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  44:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  48:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  4c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  50:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  54:	0c 94 29 04 	jmp	0x852	; 0x852 <__vector_21>
+  58:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  5c:	0c 94 02 04 	jmp	0x804	; 0x804 <__vector_23>
+  60:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  64:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  68:	0c 94 a2 00 	jmp	0x144	; 0x144 <__vector_26>
+  6c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  70:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  74:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  78:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  7c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  80:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  84:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  88:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  8c:	0c 94 a4 01 	jmp	0x348	; 0x348 <__vector_35>
+  90:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  94:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  98:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  9c:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  a0:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  a4:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  a8:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  ac:	0c 94 7f 00 	jmp	0xfe	; 0xfe <__bad_interrupt>
+  b0:	1b 02       	muls	r17, r27
+  b2:	30 02       	muls	r19, r16
+  b4:	39 02       	muls	r19, r25
+  b6:	46 02       	muls	r20, r22
+  b8:	54 02       	muls	r21, r20
+  ba:	8d 02       	muls	r24, r29
+  bc:	a1 02       	muls	r26, r17
+  be:	ae 02       	muls	r26, r30
+  c0:	b5 02       	muls	r27, r21
+  c2:	c4 02       	muls	r28, r20
+
+000000c4 <__ctors_end>:
+  c4:	11 24       	eor	r1, r1
+  c6:	1f be       	out	0x3f, r1	; 63
+  c8:	cf ef       	ldi	r28, 0xFF	; 255
+  ca:	cd bf       	out	0x3d, r28	; 61
+  cc:	df e7       	ldi	r29, 0x7F	; 127
+  ce:	de bf       	out	0x3e, r29	; 62
+
+000000d0 <__do_copy_data>:
+  d0:	10 e6       	ldi	r17, 0x60	; 96
+  d2:	a0 e0       	ldi	r26, 0x00	; 0
+  d4:	b0 e6       	ldi	r27, 0x60	; 96
+  d6:	ee e9       	ldi	r30, 0x9E	; 158
+  d8:	f8 e0       	ldi	r31, 0x08	; 8
+  da:	02 c0       	rjmp	.+4      	; 0xe0 <__do_copy_data+0x10>
+  dc:	05 90       	lpm	r0, Z+
+  de:	0d 92       	st	X+, r0
+  e0:	a2 31       	cpi	r26, 0x12	; 18
+  e2:	b1 07       	cpc	r27, r17
+  e4:	d9 f7       	brne	.-10     	; 0xdc <__do_copy_data+0xc>
+
+000000e6 <__do_clear_bss>:
+  e6:	20 e6       	ldi	r18, 0x60	; 96
+  e8:	a2 e1       	ldi	r26, 0x12	; 18
+  ea:	b0 e6       	ldi	r27, 0x60	; 96
+  ec:	01 c0       	rjmp	.+2      	; 0xf0 <.do_clear_bss_start>
+
+000000ee <.do_clear_bss_loop>:
+  ee:	1d 92       	st	X+, r1
+
+000000f0 <.do_clear_bss_start>:
+  f0:	a7 32       	cpi	r26, 0x27	; 39
+  f2:	b2 07       	cpc	r27, r18
+  f4:	e1 f7       	brne	.-8      	; 0xee <.do_clear_bss_loop>
+  f6:	0e 94 cf 01 	call	0x39e	; 0x39e <main>
+  fa:	0c 94 4d 04 	jmp	0x89a	; 0x89a <_exit>
+
+000000fe <__bad_interrupt>:
+  fe:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+00000102 <analog_init>:
+#include <analog.h>
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+void analog_init () {
+  PORTD.DIRCLR = 1 << 5 | 1 << 6 | 1 << 7;
+ 102:	80 ee       	ldi	r24, 0xE0	; 224
+ 104:	80 93 62 04 	sts	0x0462, r24	; 0x800462 <__TEXT_REGION_LENGTH__+0x7f0462>
+  VREF.ADC0REF = VREF_REFSEL_VREFA_gc;
+ 108:	86 e0       	ldi	r24, 0x06	; 6
+ 10a:	80 93 b0 00 	sts	0x00B0, r24	; 0x8000b0 <__TEXT_REGION_LENGTH__+0x7f00b0>
+  ADC0.CTRLB   = ADC_SAMPNUM_ACC16_gc;
+ 10e:	e0 e0       	ldi	r30, 0x00	; 0
+ 110:	f6 e0       	ldi	r31, 0x06	; 6
+ 112:	94 e0       	ldi	r25, 0x04	; 4
+ 114:	91 83       	std	Z+1, r25	; 0x01
+  ADC0.CTRLC   = ADC_PRESC_DIV12_gc;
+ 116:	93 e0       	ldi	r25, 0x03	; 3
+ 118:	92 83       	std	Z+2, r25	; 0x02
+  ADC0.CTRLD   = ADC_INITDLY_DLY256_gc;
+ 11a:	90 ea       	ldi	r25, 0xA0	; 160
+ 11c:	93 83       	std	Z+3, r25	; 0x03
+  ADC0.MUXPOS  = 5;
+ 11e:	95 e0       	ldi	r25, 0x05	; 5
+ 120:	90 87       	std	Z+8, r25	; 0x08
+  ADC0.MUXNEG  = 6;
+ 122:	81 87       	std	Z+9, r24	; 0x09
+  ADC0.INTCTRL = ADC_RESRDY_bm;
+ 124:	81 e0       	ldi	r24, 0x01	; 1
+ 126:	84 87       	std	Z+12, r24	; 0x0c
+  ADC0.CTRLA   = ADC_ENABLE_bm | ADC_CONVMODE_bm;
+ 128:	81 e2       	ldi	r24, 0x21	; 33
+ 12a:	80 83       	st	Z, r24
+ 12c:	08 95       	ret
+
+0000012e <analog_start>:
+}
+
+void analog_start () {
+  ADC0.COMMAND = ADC_STCONV_bm;
+ 12e:	81 e0       	ldi	r24, 0x01	; 1
+ 130:	80 93 0a 06 	sts	0x060A, r24	; 0x80060a <__TEXT_REGION_LENGTH__+0x7f060a>
+ 134:	08 95       	ret
+
+00000136 <analog_stop>:
+}
+
+void analog_stop () {
+  ADC0.COMMAND = ADC_SPCONV_bm;
+ 136:	e0 e0       	ldi	r30, 0x00	; 0
+ 138:	f6 e0       	ldi	r31, 0x06	; 6
+ 13a:	82 e0       	ldi	r24, 0x02	; 2
+ 13c:	82 87       	std	Z+10, r24	; 0x0a
+  (void)ADC0.RES;
+ 13e:	80 89       	ldd	r24, Z+16	; 0x10
+ 140:	91 89       	ldd	r25, Z+17	; 0x11
+ 142:	08 95       	ret
+
+00000144 <__vector_26>:
+}
+
+ISR (ADC0_RESRDY_vect) {
+ 144:	1f 92       	push	r1
+ 146:	0f 92       	push	r0
+ 148:	0f b6       	in	r0, 0x3f	; 63
+ 14a:	0f 92       	push	r0
+ 14c:	11 24       	eor	r1, r1
+ 14e:	2f 93       	push	r18
+ 150:	3f 93       	push	r19
+ 152:	4f 93       	push	r20
+ 154:	5f 93       	push	r21
+ 156:	6f 93       	push	r22
+ 158:	7f 93       	push	r23
+ 15a:	8f 93       	push	r24
+ 15c:	9f 93       	push	r25
+ 15e:	af 93       	push	r26
+ 160:	bf 93       	push	r27
+ 162:	ef 93       	push	r30
+ 164:	ff 93       	push	r31
+  uint16_t result = ADC0.RES;
+ 166:	80 91 10 06 	lds	r24, 0x0610	; 0x800610 <__TEXT_REGION_LENGTH__+0x7f0610>
+ 16a:	90 91 11 06 	lds	r25, 0x0611	; 0x800611 <__TEXT_REGION_LENGTH__+0x7f0611>
+  analog_callback(result);
+ 16e:	0e 94 64 01 	call	0x2c8	; 0x2c8 <analog_callback>
+}
+ 172:	ff 91       	pop	r31
+ 174:	ef 91       	pop	r30
+ 176:	bf 91       	pop	r27
+ 178:	af 91       	pop	r26
+ 17a:	9f 91       	pop	r25
+ 17c:	8f 91       	pop	r24
+ 17e:	7f 91       	pop	r23
+ 180:	6f 91       	pop	r22
+ 182:	5f 91       	pop	r21
+ 184:	4f 91       	pop	r20
+ 186:	3f 91       	pop	r19
+ 188:	2f 91       	pop	r18
+ 18a:	0f 90       	pop	r0
+ 18c:	0f be       	out	0x3f, r0	; 63
+ 18e:	0f 90       	pop	r0
+ 190:	1f 90       	pop	r1
+ 192:	18 95       	reti
+
+00000194 <height_stepper_init>:
+#include <util/delay.h>
+
+int32_t stepper_height = -1;
+
+void height_stepper_init () {
+  PORTD.DIRSET = 1 << 2 | 1 << 3;
+ 194:	8c e0       	ldi	r24, 0x0C	; 12
+ 196:	80 93 61 04 	sts	0x0461, r24	; 0x800461 <__TEXT_REGION_LENGTH__+0x7f0461>
+ 19a:	08 95       	ret
+
+0000019c <height_stepper_set_direction_up>:
+}
+
+void height_stepper_set_direction_up () {
+  PORTD.OUTSET = 1 << 3;
+ 19c:	88 e0       	ldi	r24, 0x08	; 8
+ 19e:	80 93 65 04 	sts	0x0465, r24	; 0x800465 <__TEXT_REGION_LENGTH__+0x7f0465>
+ 1a2:	08 95       	ret
+
+000001a4 <height_stepper_set_direction_down>:
+}
+
+void height_stepper_set_direction_down () {
+  PORTD.OUTCLR = 1 << 3;
+ 1a4:	88 e0       	ldi	r24, 0x08	; 8
+ 1a6:	80 93 66 04 	sts	0x0466, r24	; 0x800466 <__TEXT_REGION_LENGTH__+0x7f0466>
+ 1aa:	08 95       	ret
+
+000001ac <height_stepper_move>:
+static inline void height_stepper_step () {
+  PORTD.OUTTGL = 1 << 2;
+}
+
+void height_stepper_move (Direction direction, Speed speed, uint16_t steps) {
+  if (direction == DIRECTION_DOWN)
+ 1ac:	01 97       	sbiw	r24, 0x01	; 1
+ 1ae:	21 f4       	brne	.+8      	; 0x1b8 <height_stepper_move+0xc>
+void height_stepper_set_direction_up () {
+  PORTD.OUTSET = 1 << 3;
+}
+
+void height_stepper_set_direction_down () {
+  PORTD.OUTCLR = 1 << 3;
+ 1b0:	88 e0       	ldi	r24, 0x08	; 8
+ 1b2:	80 93 66 04 	sts	0x0466, r24	; 0x800466 <__TEXT_REGION_LENGTH__+0x7f0466>
+ 1b6:	03 c0       	rjmp	.+6      	; 0x1be <height_stepper_move+0x12>
+void height_stepper_init () {
+  PORTD.DIRSET = 1 << 2 | 1 << 3;
+}
+
+void height_stepper_set_direction_up () {
+  PORTD.OUTSET = 1 << 3;
+ 1b8:	88 e0       	ldi	r24, 0x08	; 8
+ 1ba:	80 93 65 04 	sts	0x0465, r24	; 0x800465 <__TEXT_REGION_LENGTH__+0x7f0465>
+  if (direction == DIRECTION_DOWN)
+    height_stepper_set_direction_down();
+  else
+    height_stepper_set_direction_up();
+  
+  if (speed == SPEED_FAST) {
+ 1be:	61 30       	cpi	r22, 0x01	; 1
+ 1c0:	71 05       	cpc	r23, r1
+ 1c2:	21 f0       	breq	.+8      	; 0x1cc <height_stepper_move+0x20>
+      _delay_us(50);
+
+      if (abort_flag) return;
+    }
+  } else {
+    for (uint16_t i = 0; i < steps; i++) {
+ 1c4:	41 15       	cp	r20, r1
+ 1c6:	51 05       	cpc	r21, r1
+ 1c8:	01 f5       	brne	.+64     	; 0x20a <__EEPROM_REGION_LENGTH__+0xa>
+ 1ca:	08 95       	ret
+    height_stepper_set_direction_down();
+  else
+    height_stepper_set_direction_up();
+  
+  if (speed == SPEED_FAST) {
+    for (uint16_t i = 0; i < steps; i++) {
+ 1cc:	41 15       	cp	r20, r1
+ 1ce:	51 05       	cpc	r21, r1
+ 1d0:	b9 f1       	breq	.+110    	; 0x240 <__EEPROM_REGION_LENGTH__+0x40>
+ 1d2:	80 e0       	ldi	r24, 0x00	; 0
+ 1d4:	90 e0       	ldi	r25, 0x00	; 0
+void height_stepper_set_direction_down () {
+  PORTD.OUTCLR = 1 << 3;
+}
+
+static inline void height_stepper_step () {
+  PORTD.OUTTGL = 1 << 2;
+ 1d6:	e0 e6       	ldi	r30, 0x60	; 96
+ 1d8:	f4 e0       	ldi	r31, 0x04	; 4
+ 1da:	24 e0       	ldi	r18, 0x04	; 4
+ 1dc:	27 83       	std	Z+7, r18	; 0x07
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1de:	ab e2       	ldi	r26, 0x2B	; 43
+ 1e0:	b1 e0       	ldi	r27, 0x01	; 1
+ 1e2:	11 97       	sbiw	r26, 0x01	; 1
+ 1e4:	f1 f7       	brne	.-4      	; 0x1e2 <height_stepper_move+0x36>
+ 1e6:	00 c0       	rjmp	.+0      	; 0x1e8 <height_stepper_move+0x3c>
+ 1e8:	00 00       	nop
+ 1ea:	27 83       	std	Z+7, r18	; 0x07
+ 1ec:	ab e2       	ldi	r26, 0x2B	; 43
+ 1ee:	b1 e0       	ldi	r27, 0x01	; 1
+ 1f0:	11 97       	sbiw	r26, 0x01	; 1
+ 1f2:	f1 f7       	brne	.-4      	; 0x1f0 <height_stepper_move+0x44>
+ 1f4:	00 c0       	rjmp	.+0      	; 0x1f6 <height_stepper_move+0x4a>
+ 1f6:	00 00       	nop
+      height_stepper_step();
+      _delay_us(50);
+      height_stepper_step();
+      _delay_us(50);
+
+      if (abort_flag) return;
+ 1f8:	30 91 1f 60 	lds	r19, 0x601F	; 0x80601f <abort_flag>
+ 1fc:	31 11       	cpse	r19, r1
+ 1fe:	20 c0       	rjmp	.+64     	; 0x240 <__EEPROM_REGION_LENGTH__+0x40>
+    height_stepper_set_direction_down();
+  else
+    height_stepper_set_direction_up();
+  
+  if (speed == SPEED_FAST) {
+    for (uint16_t i = 0; i < steps; i++) {
+ 200:	01 96       	adiw	r24, 0x01	; 1
+ 202:	48 17       	cp	r20, r24
+ 204:	59 07       	cpc	r21, r25
+ 206:	51 f7       	brne	.-44     	; 0x1dc <height_stepper_move+0x30>
+ 208:	08 95       	ret
+      _delay_us(50);
+
+      if (abort_flag) return;
+    }
+  } else {
+    for (uint16_t i = 0; i < steps; i++) {
+ 20a:	80 e0       	ldi	r24, 0x00	; 0
+ 20c:	90 e0       	ldi	r25, 0x00	; 0
+void height_stepper_set_direction_down () {
+  PORTD.OUTCLR = 1 << 3;
+}
+
+static inline void height_stepper_step () {
+  PORTD.OUTTGL = 1 << 2;
+ 20e:	e0 e6       	ldi	r30, 0x60	; 96
+ 210:	f4 e0       	ldi	r31, 0x04	; 4
+ 212:	24 e0       	ldi	r18, 0x04	; 4
+ 214:	27 83       	std	Z+7, r18	; 0x07
+ 216:	a7 eb       	ldi	r26, 0xB7	; 183
+ 218:	bb e0       	ldi	r27, 0x0B	; 11
+ 21a:	11 97       	sbiw	r26, 0x01	; 1
+ 21c:	f1 f7       	brne	.-4      	; 0x21a <__EEPROM_REGION_LENGTH__+0x1a>
+ 21e:	00 c0       	rjmp	.+0      	; 0x220 <__EEPROM_REGION_LENGTH__+0x20>
+ 220:	00 00       	nop
+ 222:	27 83       	std	Z+7, r18	; 0x07
+ 224:	a7 eb       	ldi	r26, 0xB7	; 183
+ 226:	bb e0       	ldi	r27, 0x0B	; 11
+ 228:	11 97       	sbiw	r26, 0x01	; 1
+ 22a:	f1 f7       	brne	.-4      	; 0x228 <__EEPROM_REGION_LENGTH__+0x28>
+ 22c:	00 c0       	rjmp	.+0      	; 0x22e <__EEPROM_REGION_LENGTH__+0x2e>
+ 22e:	00 00       	nop
+      height_stepper_step();
+      _delay_us(500);
+      height_stepper_step();
+      _delay_us(500);
+
+      if (abort_flag) return;
+ 230:	30 91 1f 60 	lds	r19, 0x601F	; 0x80601f <abort_flag>
+ 234:	31 11       	cpse	r19, r1
+ 236:	04 c0       	rjmp	.+8      	; 0x240 <__EEPROM_REGION_LENGTH__+0x40>
+      _delay_us(50);
+
+      if (abort_flag) return;
+    }
+  } else {
+    for (uint16_t i = 0; i < steps; i++) {
+ 238:	01 96       	adiw	r24, 0x01	; 1
+ 23a:	48 17       	cp	r20, r24
+ 23c:	59 07       	cpc	r21, r25
+ 23e:	51 f7       	brne	.-44     	; 0x214 <__EEPROM_REGION_LENGTH__+0x14>
+ 240:	08 95       	ret
+
+00000242 <limit_switch_init>:
+#include <limit-switch.h>
+#include <avr/io.h>
+
+void limit_switch_init () {
+  PORTC.DIRCLR = 1 << 0;
+ 242:	e0 e4       	ldi	r30, 0x40	; 64
+ 244:	f4 e0       	ldi	r31, 0x04	; 4
+ 246:	81 e0       	ldi	r24, 0x01	; 1
+ 248:	82 83       	std	Z+2, r24	; 0x02
+  PORTC.PIN0CTRL = PORT_PULLUPEN_bm;
+ 24a:	88 e0       	ldi	r24, 0x08	; 8
+ 24c:	80 8b       	std	Z+16, r24	; 0x10
+ 24e:	08 95       	ret
+
+00000250 <limit_switch_pressed>:
+}
+
+bool limit_switch_pressed () {
+  return (PORTC.IN & (1 << 0)) == 0;
+ 250:	80 91 48 04 	lds	r24, 0x0448	; 0x800448 <__TEXT_REGION_LENGTH__+0x7f0448>
+ 254:	80 95       	com	r24
+}
+ 256:	81 70       	andi	r24, 0x01	; 1
+ 258:	08 95       	ret
+
+0000025a <limit_switch_not_pressed>:
+
+bool limit_switch_not_pressed () {
+  return !limit_switch_pressed();
+ 25a:	0e 94 28 01 	call	0x250	; 0x250 <limit_switch_pressed>
+ 25e:	91 e0       	ldi	r25, 0x01	; 1
+ 260:	89 27       	eor	r24, r25
+ 262:	08 95       	ret
+
+00000264 <system_init>:
+static volatile bool     sampling;
+static volatile bool     last_byte;
+static volatile bool     send_upper;
+
+void system_init() {
+  ccp_write_io((uint8_t* )&CLKCTRL.MCLKCTRLB, 0);
+ 264:	60 e0       	ldi	r22, 0x00	; 0
+ 266:	81 e6       	ldi	r24, 0x61	; 97
+ 268:	90 e0       	ldi	r25, 0x00	; 0
+ 26a:	0e 94 47 04 	call	0x88e	; 0x88e <ccp_write_io>
+  ccp_write_io((uint8_t* )&CLKCTRL.OSCHFCTRLA, CLKCTRL_FRQSEL_24M_gc);
+ 26e:	64 e2       	ldi	r22, 0x24	; 36
+ 270:	88 e6       	ldi	r24, 0x68	; 104
+ 272:	90 e0       	ldi	r25, 0x00	; 0
+ 274:	0e 94 47 04 	call	0x88e	; 0x88e <ccp_write_io>
+  ccp_write_io((uint8_t* )&WDT.CTRLA, 0);
+ 278:	60 e0       	ldi	r22, 0x00	; 0
+ 27a:	80 e0       	ldi	r24, 0x00	; 0
+ 27c:	91 e0       	ldi	r25, 0x01	; 1
+ 27e:	0e 94 47 04 	call	0x88e	; 0x88e <ccp_write_io>
+ 282:	08 95       	ret
+
+00000284 <rotation_stepper_callback>:
+}
+
+void rotation_stepper_callback () {
+  if (samples_remaining) {
+ 284:	80 91 17 60 	lds	r24, 0x6017	; 0x806017 <samples_remaining>
+ 288:	90 91 18 60 	lds	r25, 0x6018	; 0x806018 <samples_remaining+0x1>
+ 28c:	a0 91 19 60 	lds	r26, 0x6019	; 0x806019 <samples_remaining+0x2>
+ 290:	b0 91 1a 60 	lds	r27, 0x601A	; 0x80601a <samples_remaining+0x3>
+ 294:	89 2b       	or	r24, r25
+ 296:	8a 2b       	or	r24, r26
+ 298:	8b 2b       	or	r24, r27
+ 29a:	a9 f0       	breq	.+42     	; 0x2c6 <rotation_stepper_callback+0x42>
+    samples_remaining--;
+ 29c:	80 91 17 60 	lds	r24, 0x6017	; 0x806017 <samples_remaining>
+ 2a0:	90 91 18 60 	lds	r25, 0x6018	; 0x806018 <samples_remaining+0x1>
+ 2a4:	a0 91 19 60 	lds	r26, 0x6019	; 0x806019 <samples_remaining+0x2>
+ 2a8:	b0 91 1a 60 	lds	r27, 0x601A	; 0x80601a <samples_remaining+0x3>
+ 2ac:	01 97       	sbiw	r24, 0x01	; 1
+ 2ae:	a1 09       	sbc	r26, r1
+ 2b0:	b1 09       	sbc	r27, r1
+ 2b2:	80 93 17 60 	sts	0x6017, r24	; 0x806017 <samples_remaining>
+ 2b6:	90 93 18 60 	sts	0x6018, r25	; 0x806018 <samples_remaining+0x1>
+ 2ba:	a0 93 19 60 	sts	0x6019, r26	; 0x806019 <samples_remaining+0x2>
+ 2be:	b0 93 1a 60 	sts	0x601A, r27	; 0x80601a <samples_remaining+0x3>
+    analog_start();
+ 2c2:	0e 94 97 00 	call	0x12e	; 0x12e <analog_start>
+ 2c6:	08 95       	ret
+
+000002c8 <analog_callback>:
+  }
+}
+
+void analog_callback (uint16_t result) {
+ 2c8:	cf 93       	push	r28
+ 2ca:	df 93       	push	r29
+ 2cc:	ec 01       	movw	r28, r24
+  if (!samples_remaining) {
+ 2ce:	80 91 17 60 	lds	r24, 0x6017	; 0x806017 <samples_remaining>
+ 2d2:	90 91 18 60 	lds	r25, 0x6018	; 0x806018 <samples_remaining+0x1>
+ 2d6:	a0 91 19 60 	lds	r26, 0x6019	; 0x806019 <samples_remaining+0x2>
+ 2da:	b0 91 1a 60 	lds	r27, 0x601A	; 0x80601a <samples_remaining+0x3>
+ 2de:	89 2b       	or	r24, r25
+ 2e0:	8a 2b       	or	r24, r26
+ 2e2:	8b 2b       	or	r24, r27
+ 2e4:	29 f4       	brne	.+10     	; 0x2f0 <analog_callback+0x28>
+    rotation_stepper_stop();
+ 2e6:	0e 94 30 03 	call	0x660	; 0x660 <rotation_stepper_stop>
+    last_byte = true;
+ 2ea:	81 e0       	ldi	r24, 0x01	; 1
+ 2ec:	80 93 13 60 	sts	0x6013, r24	; 0x806013 <last_byte>
+  }
+
+  sample = result;
+ 2f0:	c0 93 15 60 	sts	0x6015, r28	; 0x806015 <sample>
+ 2f4:	d0 93 16 60 	sts	0x6016, r29	; 0x806016 <sample+0x1>
+  send_upper = true;
+ 2f8:	81 e0       	ldi	r24, 0x01	; 1
+ 2fa:	80 93 12 60 	sts	0x6012, r24	; 0x806012 <__data_end>
+  uart_send(sample);
+ 2fe:	80 91 15 60 	lds	r24, 0x6015	; 0x806015 <sample>
+ 302:	90 91 16 60 	lds	r25, 0x6016	; 0x806016 <sample+0x1>
+ 306:	0e 94 7d 03 	call	0x6fa	; 0x6fa <uart_send>
+}
+ 30a:	df 91       	pop	r29
+ 30c:	cf 91       	pop	r28
+ 30e:	08 95       	ret
+
+00000310 <uart_transmitted_callback>:
+
+void uart_transmitted_callback () {
+  if (sampling && send_upper) {
+ 310:	80 91 14 60 	lds	r24, 0x6014	; 0x806014 <sampling>
+ 314:	88 23       	and	r24, r24
+ 316:	b9 f0       	breq	.+46     	; 0x346 <uart_transmitted_callback+0x36>
+ 318:	80 91 12 60 	lds	r24, 0x6012	; 0x806012 <__data_end>
+ 31c:	88 23       	and	r24, r24
+ 31e:	99 f0       	breq	.+38     	; 0x346 <uart_transmitted_callback+0x36>
+    send_upper = false;
+ 320:	10 92 12 60 	sts	0x6012, r1	; 0x806012 <__data_end>
+    uart_send(sample >> 8);
+ 324:	80 91 15 60 	lds	r24, 0x6015	; 0x806015 <sample>
+ 328:	90 91 16 60 	lds	r25, 0x6016	; 0x806016 <sample+0x1>
+ 32c:	89 2f       	mov	r24, r25
+ 32e:	0e 94 7d 03 	call	0x6fa	; 0x6fa <uart_send>
+
+    if (last_byte) {
+ 332:	80 91 13 60 	lds	r24, 0x6013	; 0x806013 <last_byte>
+ 336:	88 23       	and	r24, r24
+ 338:	31 f0       	breq	.+12     	; 0x346 <uart_transmitted_callback+0x36>
+      last_byte = false;
+ 33a:	10 92 13 60 	sts	0x6013, r1	; 0x806013 <last_byte>
+      sampling = false;
+ 33e:	10 92 14 60 	sts	0x6014, r1	; 0x806014 <sampling>
+      uart_send_crc();
+ 342:	0e 94 ab 03 	call	0x756	; 0x756 <uart_send_crc>
+ 346:	08 95       	ret
+
+00000348 <__vector_35>:
+  PORTF.DIRCLR = 1 << 2 | 1 << 3;
+  PORTF.PIN2CTRL = PORT_ISC_FALLING_gc;
+  PORTF.PIN3CTRL = PORT_ISC_FALLING_gc;
+}
+
+ISR (PORTF_PORT_vect) {
+ 348:	1f 92       	push	r1
+ 34a:	0f 92       	push	r0
+ 34c:	0f b6       	in	r0, 0x3f	; 63
+ 34e:	0f 92       	push	r0
+ 350:	11 24       	eor	r1, r1
+ 352:	8f 93       	push	r24
+ 354:	9f 93       	push	r25
+ 356:	ef 93       	push	r30
+ 358:	ff 93       	push	r31
+  if (PORTF.INTFLAGS & (1 << 2)) {
+ 35a:	80 91 a9 04 	lds	r24, 0x04A9	; 0x8004a9 <__TEXT_REGION_LENGTH__+0x7f04a9>
+ 35e:	82 ff       	sbrs	r24, 2
+ 360:	0a c0       	rjmp	.+20     	; 0x376 <__vector_35+0x2e>
+    if (state == STATE_IDLE)
+ 362:	80 91 1b 60 	lds	r24, 0x601B	; 0x80601b <state>
+ 366:	90 91 1c 60 	lds	r25, 0x601C	; 0x80601c <state+0x1>
+ 36a:	89 2b       	or	r24, r25
+ 36c:	59 f4       	brne	.+22     	; 0x384 <__vector_35+0x3c>
+      start_flag = true;
+ 36e:	81 e0       	ldi	r24, 0x01	; 1
+ 370:	80 93 20 60 	sts	0x6020, r24	; 0x806020 <start_flag>
+ 374:	07 c0       	rjmp	.+14     	; 0x384 <__vector_35+0x3c>
+  } else if (PORTF.INTFLAGS & (1 << 3)) {
+ 376:	80 91 a9 04 	lds	r24, 0x04A9	; 0x8004a9 <__TEXT_REGION_LENGTH__+0x7f04a9>
+ 37a:	83 ff       	sbrs	r24, 3
+ 37c:	03 c0       	rjmp	.+6      	; 0x384 <__vector_35+0x3c>
+    abort_flag = true;
+ 37e:	81 e0       	ldi	r24, 0x01	; 1
+ 380:	80 93 1f 60 	sts	0x601F, r24	; 0x80601f <abort_flag>
+  }
+
+  PORTF.INTFLAGS = PORTF.INTFLAGS;
+ 384:	e0 ea       	ldi	r30, 0xA0	; 160
+ 386:	f4 e0       	ldi	r31, 0x04	; 4
+ 388:	81 85       	ldd	r24, Z+9	; 0x09
+ 38a:	81 87       	std	Z+9, r24	; 0x09
+}
+ 38c:	ff 91       	pop	r31
+ 38e:	ef 91       	pop	r30
+ 390:	9f 91       	pop	r25
+ 392:	8f 91       	pop	r24
+ 394:	0f 90       	pop	r0
+ 396:	0f be       	out	0x3f, r0	; 63
+ 398:	0f 90       	pop	r0
+ 39a:	1f 90       	pop	r1
+ 39c:	18 95       	reti
+
+0000039e <main>:
+
+int main () {
+  system_init();
+ 39e:	0e 94 32 01 	call	0x264	; 0x264 <system_init>
+  uart_init();
+ 3a2:	0e 94 67 03 	call	0x6ce	; 0x6ce <uart_init>
+  analog_init();
+ 3a6:	0e 94 81 00 	call	0x102	; 0x102 <analog_init>
+  height_stepper_init();
+ 3aa:	0e 94 ca 00 	call	0x194	; 0x194 <height_stepper_init>
+  rotation_stepper_init();
+ 3ae:	0e 94 e4 02 	call	0x5c8	; 0x5c8 <rotation_stepper_init>
+  limit_switch_init();
+ 3b2:	0e 94 21 01 	call	0x242	; 0x242 <limit_switch_init>
+  STATE_UP_FAST,
+  STATE_ABORT,
+};
+
+static void abort_switch_init () {
+  PORTF.DIRCLR = 1 << 2 | 1 << 3;
+ 3b6:	e0 ea       	ldi	r30, 0xA0	; 160
+ 3b8:	f4 e0       	ldi	r31, 0x04	; 4
+ 3ba:	8c e0       	ldi	r24, 0x0C	; 12
+ 3bc:	82 83       	std	Z+2, r24	; 0x02
+  PORTF.PIN2CTRL = PORT_ISC_FALLING_gc;
+ 3be:	83 e0       	ldi	r24, 0x03	; 3
+ 3c0:	82 8b       	std	Z+18, r24	; 0x12
+  PORTF.PIN3CTRL = PORT_ISC_FALLING_gc;
+ 3c2:	83 8b       	std	Z+19, r24	; 0x13
+  analog_init();
+  height_stepper_init();
+  rotation_stepper_init();
+  limit_switch_init();
+  abort_switch_init();
+  sei();
+ 3c4:	78 94       	sei
+
+  // When starting, make sure the limit switch is not pressed
+  if (limit_switch_pressed())
+ 3c6:	0e 94 28 01 	call	0x250	; 0x250 <limit_switch_pressed>
+ 3ca:	88 23       	and	r24, r24
+ 3cc:	41 f0       	breq	.+16     	; 0x3de <main+0x40>
+    height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 2000);
+ 3ce:	40 ed       	ldi	r20, 0xD0	; 208
+ 3d0:	57 e0       	ldi	r21, 0x07	; 7
+ 3d2:	61 e0       	ldi	r22, 0x01	; 1
+ 3d4:	70 e0       	ldi	r23, 0x00	; 0
+ 3d6:	81 e0       	ldi	r24, 0x01	; 1
+ 3d8:	90 e0       	ldi	r25, 0x00	; 0
+ 3da:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        break;
+
+      case STATE_DOWN_SLOW:
+        height_stepper_move(DIRECTION_DOWN, SPEED_SLOW, 1000);
+        state = STATE_MEASUREMENT;
+        measurement_count = 0;
+ 3de:	71 2c       	mov	r7, r1
+
+  uint8_t measurement_count = 0;
+
+  while (1) {
+    if (abort_flag)
+      state = STATE_ABORT;
+ 3e0:	c9 e0       	ldi	r28, 0x09	; 9
+ 3e2:	d0 e0       	ldi	r29, 0x00	; 0
+        break;
+
+      case STATE_LIMIT_SWITCH:
+        while (limit_switch_not_pressed())
+          height_stepper_move(DIRECTION_UP, SPEED_SLOW, 1);
+        state = STATE_DOWN_FAST;
+ 3e4:	68 94       	set
+ 3e6:	88 24       	eor	r8, r8
+ 3e8:	81 f8       	bld	r8, 1
+ 3ea:	91 2c       	mov	r9, r1
+        state = STATE_MEASUREMENT;
+        break;
+
+      case STATE_SEND_COMPLETE:
+        uart_send_done();
+        state = STATE_UP_FAST;
+ 3ec:	68 94       	set
+ 3ee:	aa 24       	eor	r10, r10
+ 3f0:	a3 f8       	bld	r10, 3
+ 3f2:	b1 2c       	mov	r11, r1
+        state = (++measurement_count == 11) ? STATE_SEND_COMPLETE : STATE_UP_SLOW;
+        break;
+
+      case STATE_UP_SLOW:
+        height_stepper_move(DIRECTION_UP, SPEED_SLOW, 600);
+        state = STATE_MEASUREMENT;
+ 3f4:	04 e0       	ldi	r16, 0x04	; 4
+ 3f6:	10 e0       	ldi	r17, 0x00	; 0
+  }
+}
+
+static void take_measurement () {
+  samples_remaining = SAMPLE_COUNT;
+  sampling = true;
+ 3f8:	66 24       	eor	r6, r6
+ 3fa:	63 94       	inc	r6
+        break;
+
+      case STATE_MEASUREMENT:
+        uart_reset_crc();
+        take_measurement();
+        state = STATE_RESET_STATOR;
+ 3fc:	0f 2e       	mov	r0, r31
+ 3fe:	f5 e0       	ldi	r31, 0x05	; 5
+ 400:	cf 2e       	mov	r12, r31
+ 402:	d1 2c       	mov	r13, r1
+ 404:	f0 2d       	mov	r31, r0
+        state = STATE_DOWN_FAST;
+        break;
+
+      case STATE_DOWN_FAST:
+        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 25000);
+        state = STATE_DOWN_SLOW;
+ 406:	0f 2e       	mov	r0, r31
+ 408:	f3 e0       	ldi	r31, 0x03	; 3
+ 40a:	ef 2e       	mov	r14, r31
+ 40c:	f1 2c       	mov	r15, r1
+ 40e:	f0 2d       	mov	r31, r0
+    height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 2000);
+
+  uint8_t measurement_count = 0;
+
+  while (1) {
+    if (abort_flag)
+ 410:	80 91 1f 60 	lds	r24, 0x601F	; 0x80601f <abort_flag>
+ 414:	88 23       	and	r24, r24
+ 416:	21 f0       	breq	.+8      	; 0x420 <__LOCK_REGION_LENGTH__+0x20>
+      state = STATE_ABORT;
+ 418:	c0 93 1b 60 	sts	0x601B, r28	; 0x80601b <state>
+ 41c:	d0 93 1c 60 	sts	0x601C, r29	; 0x80601c <state+0x1>
+
+    switch (state) {
+ 420:	e0 91 1b 60 	lds	r30, 0x601B	; 0x80601b <state>
+ 424:	f0 91 1c 60 	lds	r31, 0x601C	; 0x80601c <state+0x1>
+ 428:	ea 30       	cpi	r30, 0x0A	; 10
+ 42a:	f1 05       	cpc	r31, r1
+ 42c:	88 f7       	brcc	.-30     	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+ 42e:	e8 5a       	subi	r30, 0xA8	; 168
+ 430:	ff 4f       	sbci	r31, 0xFF	; 255
+ 432:	0c 94 41 04 	jmp	0x882	; 0x882 <__tablejump2__>
+      case STATE_IDLE:
+        if (start_flag) {
+ 436:	80 91 20 60 	lds	r24, 0x6020	; 0x806020 <start_flag>
+ 43a:	88 23       	and	r24, r24
+ 43c:	49 f3       	breq	.-46     	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+          state = STATE_LIMIT_SWITCH;
+ 43e:	81 e0       	ldi	r24, 0x01	; 1
+ 440:	90 e0       	ldi	r25, 0x00	; 0
+ 442:	80 93 1b 60 	sts	0x601B, r24	; 0x80601b <state>
+ 446:	90 93 1c 60 	sts	0x601C, r25	; 0x80601c <state+0x1>
+          start_flag = false;
+ 44a:	10 92 20 60 	sts	0x6020, r1	; 0x806020 <start_flag>
+ 44e:	e0 cf       	rjmp	.-64     	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+        }
+        break;
+
+      case STATE_LIMIT_SWITCH:
+        while (limit_switch_not_pressed())
+          height_stepper_move(DIRECTION_UP, SPEED_SLOW, 1);
+ 450:	41 e0       	ldi	r20, 0x01	; 1
+ 452:	50 e0       	ldi	r21, 0x00	; 0
+ 454:	60 e0       	ldi	r22, 0x00	; 0
+ 456:	70 e0       	ldi	r23, 0x00	; 0
+ 458:	80 e0       	ldi	r24, 0x00	; 0
+ 45a:	90 e0       	ldi	r25, 0x00	; 0
+ 45c:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+          start_flag = false;
+        }
+        break;
+
+      case STATE_LIMIT_SWITCH:
+        while (limit_switch_not_pressed())
+ 460:	0e 94 2d 01 	call	0x25a	; 0x25a <limit_switch_not_pressed>
+ 464:	81 11       	cpse	r24, r1
+ 466:	f4 cf       	rjmp	.-24     	; 0x450 <__LOCK_REGION_LENGTH__+0x50>
+          height_stepper_move(DIRECTION_UP, SPEED_SLOW, 1);
+        state = STATE_DOWN_FAST;
+ 468:	80 92 1b 60 	sts	0x601B, r8	; 0x80601b <state>
+ 46c:	90 92 1c 60 	sts	0x601C, r9	; 0x80601c <state+0x1>
+        break;
+ 470:	cf cf       	rjmp	.-98     	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_DOWN_FAST:
+        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 25000);
+ 472:	48 ea       	ldi	r20, 0xA8	; 168
+ 474:	51 e6       	ldi	r21, 0x61	; 97
+ 476:	61 e0       	ldi	r22, 0x01	; 1
+ 478:	70 e0       	ldi	r23, 0x00	; 0
+ 47a:	81 e0       	ldi	r24, 0x01	; 1
+ 47c:	90 e0       	ldi	r25, 0x00	; 0
+ 47e:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        state = STATE_DOWN_SLOW;
+ 482:	e0 92 1b 60 	sts	0x601B, r14	; 0x80601b <state>
+ 486:	f0 92 1c 60 	sts	0x601C, r15	; 0x80601c <state+0x1>
+        break;
+ 48a:	c2 cf       	rjmp	.-124    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_DOWN_SLOW:
+        height_stepper_move(DIRECTION_DOWN, SPEED_SLOW, 1000);
+ 48c:	48 ee       	ldi	r20, 0xE8	; 232
+ 48e:	53 e0       	ldi	r21, 0x03	; 3
+ 490:	60 e0       	ldi	r22, 0x00	; 0
+ 492:	70 e0       	ldi	r23, 0x00	; 0
+ 494:	81 e0       	ldi	r24, 0x01	; 1
+ 496:	90 e0       	ldi	r25, 0x00	; 0
+ 498:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        state = STATE_MEASUREMENT;
+ 49c:	00 93 1b 60 	sts	0x601B, r16	; 0x80601b <state>
+ 4a0:	10 93 1c 60 	sts	0x601C, r17	; 0x80601c <state+0x1>
+        measurement_count = 0;
+ 4a4:	71 2c       	mov	r7, r1
+        break;
+ 4a6:	b4 cf       	rjmp	.-152    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_MEASUREMENT:
+        uart_reset_crc();
+ 4a8:	0e 94 a6 03 	call	0x74c	; 0x74c <uart_reset_crc>
+    }
+  }
+}
+
+static void take_measurement () {
+  samples_remaining = SAMPLE_COUNT;
+ 4ac:	8f e7       	ldi	r24, 0x7F	; 127
+ 4ae:	9f ee       	ldi	r25, 0xEF	; 239
+ 4b0:	a0 e0       	ldi	r26, 0x00	; 0
+ 4b2:	b0 e0       	ldi	r27, 0x00	; 0
+ 4b4:	80 93 17 60 	sts	0x6017, r24	; 0x806017 <samples_remaining>
+ 4b8:	90 93 18 60 	sts	0x6018, r25	; 0x806018 <samples_remaining+0x1>
+ 4bc:	a0 93 19 60 	sts	0x6019, r26	; 0x806019 <samples_remaining+0x2>
+ 4c0:	b0 93 1a 60 	sts	0x601A, r27	; 0x80601a <samples_remaining+0x3>
+  sampling = true;
+ 4c4:	60 92 14 60 	sts	0x6014, r6	; 0x806014 <sampling>
+  send_upper = false;
+ 4c8:	10 92 12 60 	sts	0x6012, r1	; 0x806012 <__data_end>
+  last_byte = false;
+ 4cc:	10 92 13 60 	sts	0x6013, r1	; 0x806013 <last_byte>
+
+  rotation_stepper_start();
+ 4d0:	0e 94 29 03 	call	0x652	; 0x652 <rotation_stepper_start>
+ 4d4:	19 c0       	rjmp	.+50     	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+
+  while (sampling) {
+    if (abort_flag) {
+ 4d6:	80 91 1f 60 	lds	r24, 0x601F	; 0x80601f <abort_flag>
+ 4da:	88 23       	and	r24, r24
+ 4dc:	a9 f0       	breq	.+42     	; 0x508 <__LOCK_REGION_LENGTH__+0x108>
+      cli();
+ 4de:	f8 94       	cli
+      samples_remaining = 0;
+ 4e0:	10 92 17 60 	sts	0x6017, r1	; 0x806017 <samples_remaining>
+ 4e4:	10 92 18 60 	sts	0x6018, r1	; 0x806018 <samples_remaining+0x1>
+ 4e8:	10 92 19 60 	sts	0x6019, r1	; 0x806019 <samples_remaining+0x2>
+ 4ec:	10 92 1a 60 	sts	0x601A, r1	; 0x80601a <samples_remaining+0x3>
+      sampling = true;
+ 4f0:	60 92 14 60 	sts	0x6014, r6	; 0x806014 <sampling>
+      send_upper = false;
+ 4f4:	10 92 12 60 	sts	0x6012, r1	; 0x806012 <__data_end>
+      last_byte = false;
+ 4f8:	10 92 13 60 	sts	0x6013, r1	; 0x806013 <last_byte>
+      analog_stop();
+ 4fc:	0e 94 9b 00 	call	0x136	; 0x136 <analog_stop>
+      rotation_stepper_stop();
+ 500:	0e 94 30 03 	call	0x660	; 0x660 <rotation_stepper_stop>
+      sei();
+ 504:	78 94       	sei
+ 506:	04 c0       	rjmp	.+8      	; 0x510 <__LOCK_REGION_LENGTH__+0x110>
+  send_upper = false;
+  last_byte = false;
+
+  rotation_stepper_start();
+
+  while (sampling) {
+ 508:	80 91 14 60 	lds	r24, 0x6014	; 0x806014 <sampling>
+ 50c:	81 11       	cpse	r24, r1
+ 50e:	e3 cf       	rjmp	.-58     	; 0x4d6 <__LOCK_REGION_LENGTH__+0xd6>
+        break;
+
+      case STATE_MEASUREMENT:
+        uart_reset_crc();
+        take_measurement();
+        state = STATE_RESET_STATOR;
+ 510:	c0 92 1b 60 	sts	0x601B, r12	; 0x80601b <state>
+ 514:	d0 92 1c 60 	sts	0x601C, r13	; 0x80601c <state+0x1>
+        break;
+ 518:	7b cf       	rjmp	.-266    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+      
+      case STATE_RESET_STATOR:
+        rotation_stepper_move_back(SAMPLE_COUNT);
+ 51a:	6f e7       	ldi	r22, 0x7F	; 127
+ 51c:	7f ee       	ldi	r23, 0xEF	; 239
+ 51e:	80 e0       	ldi	r24, 0x00	; 0
+ 520:	90 e0       	ldi	r25, 0x00	; 0
+ 522:	0e 94 fc 02 	call	0x5f8	; 0x5f8 <rotation_stepper_move_back>
+        state = (++measurement_count == 11) ? STATE_SEND_COMPLETE : STATE_UP_SLOW;
+ 526:	73 94       	inc	r7
+ 528:	8b e0       	ldi	r24, 0x0B	; 11
+ 52a:	78 16       	cp	r7, r24
+ 52c:	19 f0       	breq	.+6      	; 0x534 <__LOCK_REGION_LENGTH__+0x134>
+ 52e:	86 e0       	ldi	r24, 0x06	; 6
+ 530:	90 e0       	ldi	r25, 0x00	; 0
+ 532:	02 c0       	rjmp	.+4      	; 0x538 <__LOCK_REGION_LENGTH__+0x138>
+ 534:	87 e0       	ldi	r24, 0x07	; 7
+ 536:	90 e0       	ldi	r25, 0x00	; 0
+ 538:	80 93 1b 60 	sts	0x601B, r24	; 0x80601b <state>
+ 53c:	90 93 1c 60 	sts	0x601C, r25	; 0x80601c <state+0x1>
+        break;
+ 540:	67 cf       	rjmp	.-306    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_UP_SLOW:
+        height_stepper_move(DIRECTION_UP, SPEED_SLOW, 600);
+ 542:	48 e5       	ldi	r20, 0x58	; 88
+ 544:	52 e0       	ldi	r21, 0x02	; 2
+ 546:	60 e0       	ldi	r22, 0x00	; 0
+ 548:	70 e0       	ldi	r23, 0x00	; 0
+ 54a:	80 e0       	ldi	r24, 0x00	; 0
+ 54c:	90 e0       	ldi	r25, 0x00	; 0
+ 54e:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        state = STATE_MEASUREMENT;
+ 552:	00 93 1b 60 	sts	0x601B, r16	; 0x80601b <state>
+ 556:	10 93 1c 60 	sts	0x601C, r17	; 0x80601c <state+0x1>
+        break;
+ 55a:	5a cf       	rjmp	.-332    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_SEND_COMPLETE:
+        uart_send_done();
+ 55c:	0e 94 d6 03 	call	0x7ac	; 0x7ac <uart_send_done>
+        state = STATE_UP_FAST;
+ 560:	a0 92 1b 60 	sts	0x601B, r10	; 0x80601b <state>
+ 564:	b0 92 1c 60 	sts	0x601C, r11	; 0x80601c <state+0x1>
+        break;
+ 568:	53 cf       	rjmp	.-346    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_UP_FAST:
+        height_stepper_move(DIRECTION_UP, SPEED_FAST, 18000);
+ 56a:	40 e5       	ldi	r20, 0x50	; 80
+ 56c:	56 e4       	ldi	r21, 0x46	; 70
+ 56e:	61 e0       	ldi	r22, 0x01	; 1
+ 570:	70 e0       	ldi	r23, 0x00	; 0
+ 572:	80 e0       	ldi	r24, 0x00	; 0
+ 574:	90 e0       	ldi	r25, 0x00	; 0
+ 576:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        start_flag = false;
+ 57a:	10 92 20 60 	sts	0x6020, r1	; 0x806020 <start_flag>
+        state = STATE_IDLE;
+ 57e:	10 92 1b 60 	sts	0x601B, r1	; 0x80601b <state>
+ 582:	10 92 1c 60 	sts	0x601C, r1	; 0x80601c <state+0x1>
+        break;
+ 586:	44 cf       	rjmp	.-376    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+      case STATE_ABORT:
+        state = STATE_IDLE;
+ 588:	10 92 1b 60 	sts	0x601B, r1	; 0x80601b <state>
+ 58c:	10 92 1c 60 	sts	0x601C, r1	; 0x80601c <state+0x1>
+        start_flag = false;
+ 590:	10 92 20 60 	sts	0x6020, r1	; 0x806020 <start_flag>
+        abort_flag = false;
+ 594:	10 92 1f 60 	sts	0x601F, r1	; 0x80601f <abort_flag>
+  
+        uart_send_abort();
+ 598:	0e 94 e7 03 	call	0x7ce	; 0x7ce <uart_send_abort>
+        while (limit_switch_not_pressed())
+ 59c:	08 c0       	rjmp	.+16     	; 0x5ae <__LOCK_REGION_LENGTH__+0x1ae>
+          height_stepper_move(DIRECTION_UP, SPEED_FAST, 1);
+ 59e:	41 e0       	ldi	r20, 0x01	; 1
+ 5a0:	50 e0       	ldi	r21, 0x00	; 0
+ 5a2:	61 e0       	ldi	r22, 0x01	; 1
+ 5a4:	70 e0       	ldi	r23, 0x00	; 0
+ 5a6:	80 e0       	ldi	r24, 0x00	; 0
+ 5a8:	90 e0       	ldi	r25, 0x00	; 0
+ 5aa:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        state = STATE_IDLE;
+        start_flag = false;
+        abort_flag = false;
+  
+        uart_send_abort();
+        while (limit_switch_not_pressed())
+ 5ae:	0e 94 2d 01 	call	0x25a	; 0x25a <limit_switch_not_pressed>
+ 5b2:	81 11       	cpse	r24, r1
+ 5b4:	f4 cf       	rjmp	.-24     	; 0x59e <__LOCK_REGION_LENGTH__+0x19e>
+          height_stepper_move(DIRECTION_UP, SPEED_FAST, 1);
+        height_stepper_move(DIRECTION_DOWN, SPEED_FAST, 2000);
+ 5b6:	40 ed       	ldi	r20, 0xD0	; 208
+ 5b8:	57 e0       	ldi	r21, 0x07	; 7
+ 5ba:	61 e0       	ldi	r22, 0x01	; 1
+ 5bc:	70 e0       	ldi	r23, 0x00	; 0
+ 5be:	81 e0       	ldi	r24, 0x01	; 1
+ 5c0:	90 e0       	ldi	r25, 0x00	; 0
+ 5c2:	0e 94 d6 00 	call	0x1ac	; 0x1ac <height_stepper_move>
+        break;
+ 5c6:	24 cf       	rjmp	.-440    	; 0x410 <__LOCK_REGION_LENGTH__+0x10>
+
+000005c8 <rotation_stepper_init>:
+#include <avr/io.h>
+#include <avr/interrupt.h>
+#include <util/delay.h>
+
+void rotation_stepper_init () {
+  PORTD.DIRSET = 1 << 1 | 1 << 4;
+ 5c8:	e0 e6       	ldi	r30, 0x60	; 96
+ 5ca:	f4 e0       	ldi	r31, 0x04	; 4
+ 5cc:	82 e1       	ldi	r24, 0x12	; 18
+ 5ce:	81 83       	std	Z+1, r24	; 0x01
+  PORTD.PIN1CTRL = PORT_INVEN_bm;
+ 5d0:	80 e8       	ldi	r24, 0x80	; 128
+ 5d2:	81 8b       	std	Z+17, r24	; 0x11
+  PORTMUX.TCAROUTEA = PORTMUX_TCA0_PORTD_gc;
+ 5d4:	83 e0       	ldi	r24, 0x03	; 3
+ 5d6:	80 93 e6 05 	sts	0x05E6, r24	; 0x8005e6 <__TEXT_REGION_LENGTH__+0x7f05e6>
+
+  TCA0.SINGLE.CTRLB   = TCA_SINGLE_CMP1EN_bm | TCA_SINGLE_WGMODE_SINGLESLOPE_gc;
+ 5da:	e0 e0       	ldi	r30, 0x00	; 0
+ 5dc:	fa e0       	ldi	r31, 0x0A	; 10
+ 5de:	83 e2       	ldi	r24, 0x23	; 35
+ 5e0:	81 83       	std	Z+1, r24	; 0x01
+  TCA0.SINGLE.INTCTRL = TCA_SINGLE_CMP1_bm;
+ 5e2:	80 e2       	ldi	r24, 0x20	; 32
+ 5e4:	82 87       	std	Z+10, r24	; 0x0a
+  TCA0.SINGLE.CMP1    = 2000ul;
+ 5e6:	80 ed       	ldi	r24, 0xD0	; 208
+ 5e8:	97 e0       	ldi	r25, 0x07	; 7
+ 5ea:	82 a7       	std	Z+42, r24	; 0x2a
+ 5ec:	93 a7       	std	Z+43, r25	; 0x2b
+  TCA0.SINGLE.PER     = 4000ul;
+ 5ee:	80 ea       	ldi	r24, 0xA0	; 160
+ 5f0:	9f e0       	ldi	r25, 0x0F	; 15
+ 5f2:	86 a3       	std	Z+38, r24	; 0x26
+ 5f4:	97 a3       	std	Z+39, r25	; 0x27
+ 5f6:	08 95       	ret
+
+000005f8 <rotation_stepper_move_back>:
+}
+
+void rotation_stepper_move_back (uint32_t steps) {
+ 5f8:	ab 01       	movw	r20, r22
+ 5fa:	bc 01       	movw	r22, r24
+  PORTMUX.TCAROUTEA = 0;
+ 5fc:	10 92 e6 05 	sts	0x05E6, r1	; 0x8005e6 <__TEXT_REGION_LENGTH__+0x7f05e6>
+  PORTD.OUTTGL = 1 << 4;
+ 600:	80 e1       	ldi	r24, 0x10	; 16
+ 602:	80 93 67 04 	sts	0x0467, r24	; 0x800467 <__TEXT_REGION_LENGTH__+0x7f0467>
+
+  for (uint32_t i = 0; i < steps; i++) {
+ 606:	41 15       	cp	r20, r1
+ 608:	51 05       	cpc	r21, r1
+ 60a:	61 05       	cpc	r22, r1
+ 60c:	71 05       	cpc	r23, r1
+ 60e:	d1 f0       	breq	.+52     	; 0x644 <rotation_stepper_move_back+0x4c>
+ 610:	80 e0       	ldi	r24, 0x00	; 0
+ 612:	90 e0       	ldi	r25, 0x00	; 0
+ 614:	dc 01       	movw	r26, r24
+    PORTD.OUTSET = 1 << 1;
+ 616:	e0 e6       	ldi	r30, 0x60	; 96
+ 618:	f4 e0       	ldi	r31, 0x04	; 4
+ 61a:	22 e0       	ldi	r18, 0x02	; 2
+ 61c:	25 83       	std	Z+5, r18	; 0x05
+ 61e:	30 ea       	ldi	r19, 0xA0	; 160
+ 620:	3a 95       	dec	r19
+ 622:	f1 f7       	brne	.-4      	; 0x620 <rotation_stepper_move_back+0x28>
+    _delay_us(20);
+    PORTD.OUTCLR = 1 << 1;
+ 624:	26 83       	std	Z+6, r18	; 0x06
+ 626:	30 ea       	ldi	r19, 0xA0	; 160
+ 628:	3a 95       	dec	r19
+ 62a:	f1 f7       	brne	.-4      	; 0x628 <rotation_stepper_move_back+0x30>
+    _delay_us(20);
+
+    if (abort_flag)
+ 62c:	30 91 1f 60 	lds	r19, 0x601F	; 0x80601f <abort_flag>
+ 630:	31 11       	cpse	r19, r1
+ 632:	08 c0       	rjmp	.+16     	; 0x644 <rotation_stepper_move_back+0x4c>
+
+void rotation_stepper_move_back (uint32_t steps) {
+  PORTMUX.TCAROUTEA = 0;
+  PORTD.OUTTGL = 1 << 4;
+
+  for (uint32_t i = 0; i < steps; i++) {
+ 634:	01 96       	adiw	r24, 0x01	; 1
+ 636:	a1 1d       	adc	r26, r1
+ 638:	b1 1d       	adc	r27, r1
+ 63a:	48 17       	cp	r20, r24
+ 63c:	59 07       	cpc	r21, r25
+ 63e:	6a 07       	cpc	r22, r26
+ 640:	7b 07       	cpc	r23, r27
+ 642:	61 f7       	brne	.-40     	; 0x61c <rotation_stepper_move_back+0x24>
+
+    if (abort_flag)
+      break;
+  }
+
+  PORTD.OUTTGL = 1 << 4;
+ 644:	80 e1       	ldi	r24, 0x10	; 16
+ 646:	80 93 67 04 	sts	0x0467, r24	; 0x800467 <__TEXT_REGION_LENGTH__+0x7f0467>
+  PORTMUX.TCAROUTEA = PORTMUX_TCA0_PORTD_gc;
+ 64a:	83 e0       	ldi	r24, 0x03	; 3
+ 64c:	80 93 e6 05 	sts	0x05E6, r24	; 0x8005e6 <__TEXT_REGION_LENGTH__+0x7f05e6>
+ 650:	08 95       	ret
+
+00000652 <rotation_stepper_start>:
+}
+
+void rotation_stepper_start () {
+  TCA0.SINGLE.CTRLESET = TCA_SINGLE_CMD_RESTART_gc;
+ 652:	e0 e0       	ldi	r30, 0x00	; 0
+ 654:	fa e0       	ldi	r31, 0x0A	; 10
+ 656:	88 e0       	ldi	r24, 0x08	; 8
+ 658:	85 83       	std	Z+5, r24	; 0x05
+  TCA0.SINGLE.CTRLA = TCA_SINGLE_ENABLE_bm;
+ 65a:	81 e0       	ldi	r24, 0x01	; 1
+ 65c:	80 83       	st	Z, r24
+ 65e:	08 95       	ret
+
+00000660 <rotation_stepper_stop>:
+}
+
+void rotation_stepper_stop () {
+  TCA0.SINGLE.CTRLA = 0;
+ 660:	e0 e0       	ldi	r30, 0x00	; 0
+ 662:	fa e0       	ldi	r31, 0x0A	; 10
+ 664:	10 82       	st	Z, r1
+  TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP1_bm; // Clear any interrupt flags
+ 666:	80 e2       	ldi	r24, 0x20	; 32
+ 668:	83 87       	std	Z+11, r24	; 0x0b
+ 66a:	08 95       	ret
+
+0000066c <__vector_12>:
+}
+
+ISR (TCA0_CMP1_vect) {
+ 66c:	1f 92       	push	r1
+ 66e:	0f 92       	push	r0
+ 670:	0f b6       	in	r0, 0x3f	; 63
+ 672:	0f 92       	push	r0
+ 674:	11 24       	eor	r1, r1
+ 676:	2f 93       	push	r18
+ 678:	3f 93       	push	r19
+ 67a:	4f 93       	push	r20
+ 67c:	5f 93       	push	r21
+ 67e:	6f 93       	push	r22
+ 680:	7f 93       	push	r23
+ 682:	8f 93       	push	r24
+ 684:	9f 93       	push	r25
+ 686:	af 93       	push	r26
+ 688:	bf 93       	push	r27
+ 68a:	ef 93       	push	r30
+ 68c:	ff 93       	push	r31
+  TCA0.SINGLE.INTFLAGS = TCA_SINGLE_CMP1_bm;
+ 68e:	80 e2       	ldi	r24, 0x20	; 32
+ 690:	80 93 0b 0a 	sts	0x0A0B, r24	; 0x800a0b <__TEXT_REGION_LENGTH__+0x7f0a0b>
+  rotation_stepper_callback();
+ 694:	0e 94 42 01 	call	0x284	; 0x284 <rotation_stepper_callback>
+}
+ 698:	ff 91       	pop	r31
+ 69a:	ef 91       	pop	r30
+ 69c:	bf 91       	pop	r27
+ 69e:	af 91       	pop	r26
+ 6a0:	9f 91       	pop	r25
+ 6a2:	8f 91       	pop	r24
+ 6a4:	7f 91       	pop	r23
+ 6a6:	6f 91       	pop	r22
+ 6a8:	5f 91       	pop	r21
+ 6aa:	4f 91       	pop	r20
+ 6ac:	3f 91       	pop	r19
+ 6ae:	2f 91       	pop	r18
+ 6b0:	0f 90       	pop	r0
+ 6b2:	0f be       	out	0x3f, r0	; 63
+ 6b4:	0f 90       	pop	r0
+ 6b6:	1f 90       	pop	r1
+ 6b8:	18 95       	reti
+
+000006ba <uart_put_char>:
+  static FILE avr_stdout = FDEV_SETUP_STREAM(uart_put_char, NULL, _FDEV_SETUP_WRITE);
+  stdout = &avr_stdout;
+}
+
+static int uart_put_char(char c, FILE* file) {
+  while ((USART0.STATUS & USART_DREIF_bm) == 0);
+ 6ba:	e0 e0       	ldi	r30, 0x00	; 0
+ 6bc:	f8 e0       	ldi	r31, 0x08	; 8
+ 6be:	94 81       	ldd	r25, Z+4	; 0x04
+ 6c0:	95 ff       	sbrs	r25, 5
+ 6c2:	fd cf       	rjmp	.-6      	; 0x6be <uart_put_char+0x4>
+  USART0.TXDATAL = c;
+ 6c4:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+  return 0;
+}
+ 6c8:	80 e0       	ldi	r24, 0x00	; 0
+ 6ca:	90 e0       	ldi	r25, 0x00	; 0
+ 6cc:	08 95       	ret
+
+000006ce <uart_init>:
+  data ^= data << 4;
+  return ((((uint16_t)data << 8) | ((crc & 0xff00) >> 8)) ^ (uint8_t)(data >> 4) ^ ((uint16_t)data << 3));
+}
+
+void uart_init () {
+  PORTA.DIRSET = 1 << 0;
+ 6ce:	e0 e0       	ldi	r30, 0x00	; 0
+ 6d0:	f4 e0       	ldi	r31, 0x04	; 4
+ 6d2:	81 e0       	ldi	r24, 0x01	; 1
+ 6d4:	81 83       	std	Z+1, r24	; 0x01
+  PORTA.DIRCLR = 1 << 1;
+ 6d6:	82 e0       	ldi	r24, 0x02	; 2
+ 6d8:	82 83       	std	Z+2, r24	; 0x02
+  USART0.CTRLB = USART_TXEN_bm | USART_RXEN_bm;
+ 6da:	e0 e0       	ldi	r30, 0x00	; 0
+ 6dc:	f8 e0       	ldi	r31, 0x08	; 8
+ 6de:	80 ec       	ldi	r24, 0xC0	; 192
+ 6e0:	86 83       	std	Z+6, r24	; 0x06
+  USART0.CTRLA = USART_RXCIE_bm | USART_TXCIE_bm;
+ 6e2:	85 83       	std	Z+5, r24	; 0x05
+  USART0.BAUD  = 4 * F_CPU / 921600;
+ 6e4:	88 e6       	ldi	r24, 0x68	; 104
+ 6e6:	90 e0       	ldi	r25, 0x00	; 0
+ 6e8:	80 87       	std	Z+8, r24	; 0x08
+ 6ea:	91 87       	std	Z+9, r25	; 0x09
+
+  static FILE avr_stdout = FDEV_SETUP_STREAM(uart_put_char, NULL, _FDEV_SETUP_WRITE);
+  stdout = &avr_stdout;
+ 6ec:	84 e0       	ldi	r24, 0x04	; 4
+ 6ee:	90 e6       	ldi	r25, 0x60	; 96
+ 6f0:	80 93 23 60 	sts	0x6023, r24	; 0x806023 <__iob+0x2>
+ 6f4:	90 93 24 60 	sts	0x6024, r25	; 0x806024 <__iob+0x3>
+ 6f8:	08 95       	ret
+
+000006fa <uart_send>:
+  USART0.TXDATAL = c;
+  return 0;
+}
+
+void uart_send (uint8_t data) {
+  crc = update_crc_ccitt(crc, data);
+ 6fa:	40 91 1d 60 	lds	r20, 0x601D	; 0x80601d <crc>
+ 6fe:	50 91 1e 60 	lds	r21, 0x601E	; 0x80601e <crc+0x1>
+
+// Forward declaration
+static int uart_put_char (char, FILE*);
+
+static uint16_t update_crc_ccitt(uint16_t crc, uint8_t data) {
+  data ^= crc & 0xff;
+ 702:	98 2f       	mov	r25, r24
+ 704:	94 27       	eor	r25, r20
+  data ^= data << 4;
+ 706:	60 e1       	ldi	r22, 0x10	; 16
+ 708:	96 9f       	mul	r25, r22
+ 70a:	90 01       	movw	r18, r0
+ 70c:	11 24       	eor	r1, r1
+ 70e:	92 27       	eor	r25, r18
+  return ((((uint16_t)data << 8) | ((crc & 0xff00) >> 8)) ^ (uint8_t)(data >> 4) ^ ((uint16_t)data << 3));
+ 710:	29 2f       	mov	r18, r25
+ 712:	30 e0       	ldi	r19, 0x00	; 0
+ 714:	72 2f       	mov	r23, r18
+ 716:	66 27       	eor	r22, r22
+ 718:	45 2f       	mov	r20, r21
+ 71a:	55 27       	eor	r21, r21
+ 71c:	46 2b       	or	r20, r22
+ 71e:	57 2b       	or	r21, r23
+ 720:	92 95       	swap	r25
+ 722:	9f 70       	andi	r25, 0x0F	; 15
+ 724:	22 0f       	add	r18, r18
+ 726:	33 1f       	adc	r19, r19
+ 728:	22 0f       	add	r18, r18
+ 72a:	33 1f       	adc	r19, r19
+ 72c:	22 0f       	add	r18, r18
+ 72e:	33 1f       	adc	r19, r19
+ 730:	29 27       	eor	r18, r25
+ 732:	24 27       	eor	r18, r20
+ 734:	35 27       	eor	r19, r21
+  USART0.TXDATAL = c;
+  return 0;
+}
+
+void uart_send (uint8_t data) {
+  crc = update_crc_ccitt(crc, data);
+ 736:	20 93 1d 60 	sts	0x601D, r18	; 0x80601d <crc>
+ 73a:	30 93 1e 60 	sts	0x601E, r19	; 0x80601e <crc+0x1>
+  if ((USART0.STATUS & USART_DREIF_bm) == 0)
+ 73e:	90 91 04 08 	lds	r25, 0x0804	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f0804>
+ 742:	95 ff       	sbrs	r25, 5
+ 744:	ff cf       	rjmp	.-2      	; 0x744 <uart_send+0x4a>
+    while (1);
+  USART0.TXDATAL = data;
+ 746:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+ 74a:	08 95       	ret
+
+0000074c <uart_reset_crc>:
+}
+
+void uart_reset_crc () {
+  crc = 0;
+ 74c:	10 92 1d 60 	sts	0x601D, r1	; 0x80601d <crc>
+ 750:	10 92 1e 60 	sts	0x601E, r1	; 0x80601e <crc+0x1>
+ 754:	08 95       	ret
+
+00000756 <uart_send_crc>:
+}
+
+void uart_send_crc () {
+  USART0.CTRLA &= ~USART_TXCIE_bm;
+ 756:	e0 e0       	ldi	r30, 0x00	; 0
+ 758:	f8 e0       	ldi	r31, 0x08	; 8
+ 75a:	85 81       	ldd	r24, Z+5	; 0x05
+ 75c:	8f 7b       	andi	r24, 0xBF	; 191
+ 75e:	85 83       	std	Z+5, r24	; 0x05
+
+  while ((USART0.STATUS & USART_DREIF_bm) == 0);
+ 760:	84 81       	ldd	r24, Z+4	; 0x04
+ 762:	85 ff       	sbrs	r24, 5
+ 764:	fd cf       	rjmp	.-6      	; 0x760 <uart_send_crc+0xa>
+  USART0.TXDATAL = crc;
+ 766:	80 91 1d 60 	lds	r24, 0x601D	; 0x80601d <crc>
+ 76a:	90 91 1e 60 	lds	r25, 0x601E	; 0x80601e <crc+0x1>
+ 76e:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+  while ((USART0.STATUS & USART_DREIF_bm) == 0);
+ 772:	e0 e0       	ldi	r30, 0x00	; 0
+ 774:	f8 e0       	ldi	r31, 0x08	; 8
+ 776:	84 81       	ldd	r24, Z+4	; 0x04
+ 778:	85 ff       	sbrs	r24, 5
+ 77a:	fd cf       	rjmp	.-6      	; 0x776 <uart_send_crc+0x20>
+  USART0.TXDATAL = crc >> 8;
+ 77c:	80 91 1d 60 	lds	r24, 0x601D	; 0x80601d <crc>
+ 780:	90 91 1e 60 	lds	r25, 0x601E	; 0x80601e <crc+0x1>
+ 784:	e0 e0       	ldi	r30, 0x00	; 0
+ 786:	f8 e0       	ldi	r31, 0x08	; 8
+ 788:	92 83       	std	Z+2, r25	; 0x02
+  crc = 0;
+ 78a:	10 92 1d 60 	sts	0x601D, r1	; 0x80601d <crc>
+ 78e:	10 92 1e 60 	sts	0x601E, r1	; 0x80601e <crc+0x1>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 792:	2f ef       	ldi	r18, 0xFF	; 255
+ 794:	8e e9       	ldi	r24, 0x9E	; 158
+ 796:	94 e2       	ldi	r25, 0x24	; 36
+ 798:	21 50       	subi	r18, 0x01	; 1
+ 79a:	80 40       	sbci	r24, 0x00	; 0
+ 79c:	90 40       	sbci	r25, 0x00	; 0
+ 79e:	e1 f7       	brne	.-8      	; 0x798 <uart_send_crc+0x42>
+ 7a0:	00 c0       	rjmp	.+0      	; 0x7a2 <uart_send_crc+0x4c>
+ 7a2:	00 00       	nop
+  _delay_ms(500);
+  USART0.CTRLA |= USART_TXCIE_bm;
+ 7a4:	85 81       	ldd	r24, Z+5	; 0x05
+ 7a6:	80 64       	ori	r24, 0x40	; 64
+ 7a8:	85 83       	std	Z+5, r24	; 0x05
+ 7aa:	08 95       	ret
+
+000007ac <uart_send_done>:
+}
+
+void uart_send_done () {
+  while ((USART0.STATUS & USART_DREIF_bm) == 0);
+ 7ac:	e0 e0       	ldi	r30, 0x00	; 0
+ 7ae:	f8 e0       	ldi	r31, 0x08	; 8
+ 7b0:	84 81       	ldd	r24, Z+4	; 0x04
+ 7b2:	85 ff       	sbrs	r24, 5
+ 7b4:	fd cf       	rjmp	.-6      	; 0x7b0 <uart_send_done+0x4>
+  USART0.TXDATAL = 0;
+ 7b6:	10 92 02 08 	sts	0x0802, r1	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+ 7ba:	2f ef       	ldi	r18, 0xFF	; 255
+ 7bc:	8e e9       	ldi	r24, 0x9E	; 158
+ 7be:	94 e2       	ldi	r25, 0x24	; 36
+ 7c0:	21 50       	subi	r18, 0x01	; 1
+ 7c2:	80 40       	sbci	r24, 0x00	; 0
+ 7c4:	90 40       	sbci	r25, 0x00	; 0
+ 7c6:	e1 f7       	brne	.-8      	; 0x7c0 <uart_send_done+0x14>
+ 7c8:	00 c0       	rjmp	.+0      	; 0x7ca <uart_send_done+0x1e>
+ 7ca:	00 00       	nop
+ 7cc:	08 95       	ret
+
+000007ce <uart_send_abort>:
+ 7ce:	2f ef       	ldi	r18, 0xFF	; 255
+ 7d0:	8d e3       	ldi	r24, 0x3D	; 61
+ 7d2:	99 e4       	ldi	r25, 0x49	; 73
+ 7d4:	21 50       	subi	r18, 0x01	; 1
+ 7d6:	80 40       	sbci	r24, 0x00	; 0
+ 7d8:	90 40       	sbci	r25, 0x00	; 0
+ 7da:	e1 f7       	brne	.-8      	; 0x7d4 <uart_send_abort+0x6>
+ 7dc:	00 c0       	rjmp	.+0      	; 0x7de <uart_send_abort+0x10>
+ 7de:	00 00       	nop
+  _delay_ms(500);
+}
+
+void uart_send_abort () {
+  _delay_ms(1000);
+  while ((USART0.STATUS & USART_DREIF_bm) == 0);
+ 7e0:	e0 e0       	ldi	r30, 0x00	; 0
+ 7e2:	f8 e0       	ldi	r31, 0x08	; 8
+ 7e4:	84 81       	ldd	r24, Z+4	; 0x04
+ 7e6:	85 ff       	sbrs	r24, 5
+ 7e8:	fd cf       	rjmp	.-6      	; 0x7e4 <uart_send_abort+0x16>
+  USART0.TXDATAL = 1;
+ 7ea:	81 e0       	ldi	r24, 0x01	; 1
+ 7ec:	80 93 02 08 	sts	0x0802, r24	; 0x800802 <__TEXT_REGION_LENGTH__+0x7f0802>
+ 7f0:	2f ef       	ldi	r18, 0xFF	; 255
+ 7f2:	8d e3       	ldi	r24, 0x3D	; 61
+ 7f4:	99 e4       	ldi	r25, 0x49	; 73
+ 7f6:	21 50       	subi	r18, 0x01	; 1
+ 7f8:	80 40       	sbci	r24, 0x00	; 0
+ 7fa:	90 40       	sbci	r25, 0x00	; 0
+ 7fc:	e1 f7       	brne	.-8      	; 0x7f6 <uart_send_abort+0x28>
+ 7fe:	00 c0       	rjmp	.+0      	; 0x800 <uart_send_abort+0x32>
+ 800:	00 00       	nop
+ 802:	08 95       	ret
+
+00000804 <__vector_23>:
+  _delay_ms(1000);
+}
+
+ISR (USART0_TXC_vect) {
+ 804:	1f 92       	push	r1
+ 806:	0f 92       	push	r0
+ 808:	0f b6       	in	r0, 0x3f	; 63
+ 80a:	0f 92       	push	r0
+ 80c:	11 24       	eor	r1, r1
+ 80e:	2f 93       	push	r18
+ 810:	3f 93       	push	r19
+ 812:	4f 93       	push	r20
+ 814:	5f 93       	push	r21
+ 816:	6f 93       	push	r22
+ 818:	7f 93       	push	r23
+ 81a:	8f 93       	push	r24
+ 81c:	9f 93       	push	r25
+ 81e:	af 93       	push	r26
+ 820:	bf 93       	push	r27
+ 822:	ef 93       	push	r30
+ 824:	ff 93       	push	r31
+  USART0.STATUS = USART_TXCIF_bm;
+ 826:	80 e4       	ldi	r24, 0x40	; 64
+ 828:	80 93 04 08 	sts	0x0804, r24	; 0x800804 <__TEXT_REGION_LENGTH__+0x7f0804>
+  uart_transmitted_callback();
+ 82c:	0e 94 88 01 	call	0x310	; 0x310 <uart_transmitted_callback>
+}
+ 830:	ff 91       	pop	r31
+ 832:	ef 91       	pop	r30
+ 834:	bf 91       	pop	r27
+ 836:	af 91       	pop	r26
+ 838:	9f 91       	pop	r25
+ 83a:	8f 91       	pop	r24
+ 83c:	7f 91       	pop	r23
+ 83e:	6f 91       	pop	r22
+ 840:	5f 91       	pop	r21
+ 842:	4f 91       	pop	r20
+ 844:	3f 91       	pop	r19
+ 846:	2f 91       	pop	r18
+ 848:	0f 90       	pop	r0
+ 84a:	0f be       	out	0x3f, r0	; 63
+ 84c:	0f 90       	pop	r0
+ 84e:	1f 90       	pop	r1
+ 850:	18 95       	reti
+
+00000852 <__vector_21>:
+
+ISR (USART0_RXC_vect) {
+ 852:	1f 92       	push	r1
+ 854:	0f 92       	push	r0
+ 856:	0f b6       	in	r0, 0x3f	; 63
+ 858:	0f 92       	push	r0
+ 85a:	11 24       	eor	r1, r1
+ 85c:	8f 93       	push	r24
+  uint8_t data = USART0.RXDATAL;
+ 85e:	80 91 00 08 	lds	r24, 0x0800	; 0x800800 <__TEXT_REGION_LENGTH__+0x7f0800>
+
+  if (data == 0)
+ 862:	81 11       	cpse	r24, r1
+ 864:	04 c0       	rjmp	.+8      	; 0x86e <__vector_21+0x1c>
+    start_flag = true;
+ 866:	81 e0       	ldi	r24, 0x01	; 1
+ 868:	80 93 20 60 	sts	0x6020, r24	; 0x806020 <start_flag>
+ 86c:	04 c0       	rjmp	.+8      	; 0x876 <__vector_21+0x24>
+  else if (data == 1)
+ 86e:	81 30       	cpi	r24, 0x01	; 1
+ 870:	11 f4       	brne	.+4      	; 0x876 <__vector_21+0x24>
+    abort_flag = true;
+ 872:	80 93 1f 60 	sts	0x601F, r24	; 0x80601f <abort_flag>
+}
+ 876:	8f 91       	pop	r24
+ 878:	0f 90       	pop	r0
+ 87a:	0f be       	out	0x3f, r0	; 63
+ 87c:	0f 90       	pop	r0
+ 87e:	1f 90       	pop	r1
+ 880:	18 95       	reti
+
+00000882 <__tablejump2__>:
+ 882:	ee 0f       	add	r30, r30
+ 884:	ff 1f       	adc	r31, r31
+ 886:	05 90       	lpm	r0, Z+
+ 888:	f4 91       	lpm	r31, Z
+ 88a:	e0 2d       	mov	r30, r0
+ 88c:	09 94       	ijmp
+
+0000088e <ccp_write_io>:
+ 88e:	dc 01       	movw	r26, r24
+ 890:	28 ed       	ldi	r18, 0xD8	; 216
+ 892:	20 93 34 00 	sts	0x0034, r18	; 0x800034 <__TEXT_REGION_LENGTH__+0x7f0034>
+ 896:	6c 93       	st	X, r22
+ 898:	08 95       	ret
+
+0000089a <_exit>:
+ 89a:	f8 94       	cli
+
+0000089c <__stop_program>:
+ 89c:	ff cf       	rjmp	.-2      	; 0x89c <__stop_program>
