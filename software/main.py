@@ -6,11 +6,13 @@ from process  import Process
 import matplotlib.pyplot as plot
 
 hardware = Hardware('COM6')
+process  = Process('data/tmp')
 
 measurements = []
 
-def delete_in_folder_content (path):
+def delete_tmp_content ():
     try:
+        path = 'data/tmp'
         if os.path.exists(path) and os.path.isdir(path):
             filenames = os.listdir(path)
             for filename in filenames:
@@ -20,34 +22,16 @@ def delete_in_folder_content (path):
     except:
         pass
 
-def get_stator_details():
-    print()
-    name = input('Stator name: ')
-    mode = input('3D scan (y/N): ')
-
-    is_3d = mode.lower() == 'y'
-
-    if is_3d:
-        hardware.send_code(hardware.MODE_3D)
-    else:
-        hardware.send_code(hardware.MODE_SINGLE)
-    
-    filename = "tmp" if not name else (name + '_3d') if is_3d else (name + '_single')
-    
-    directory = "data/" + filename
-    os.makedirs(directory, exist_ok=True)
-    delete_in_folder_content(directory)
-    
-    print('waiting for start button to be pressed')
-    hardware.send_code(hardware.START)
-
-    return filename
+def try_create_tmp ():
+    if not os.path.exists('data/tmp'):
+        os.makedirs('data/tmp')
 
 def main ():
+    try_create_tmp()
+    delete_tmp_content()
+
     index = 0
     delete_tmp_when_receiving_data = True
-
-    filename = get_stator_details()
 
     while True:
         status, data = hardware.get_packet()
@@ -60,7 +44,6 @@ def main ():
             print('done reading %d measurements' % len(measurements))
             if code == 0:
                 # Complete
-                process  = Process('data/' + filename)
                 process.run()
 
                 # Du har prossesert data
@@ -72,25 +55,33 @@ def main ():
                 
                 plot.legend()
                 plot.show()
+
+                delete_tmp_when_receiving_data = True
                 measurements.clear()
                 index = 0
+                pass
             elif code == 1:
                 # Abort
+                delete_tmp_when_receiving_data = True
                 measurements.clear()
                 index = 0
-
-            filename = get_stator_details()
+                pass
+        
             print()
         else:
             print('received a data packet')
+            if delete_tmp_when_receiving_data:
+                delete_tmp_when_receiving_data = False
+                delete_tmp_content()
 
             # Data is received
             data = hardware.bytes_to_samples(data)
             measurements.append(data)
 
-            print('data/%s/%d.txt' % (filename, index))
+            try_create_tmp()
+            print('written data to data/tmp/raw_%d.txt' % index)
             print()
-            with open('data/%s/%d.txt' % (filename, index), "w") as file:
+            with open('data/tmp/raw_%d.txt' % index, "w") as file:
                 for number in data:
                     file.write(str(number) + "\n")
             
